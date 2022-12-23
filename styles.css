@@ -1,0 +1,257 @@
+body {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: hsl(185, 41%, 84%);
+    padding: 7.5%;
+}
+
+main {
+    background-color: white;
+    border-radius: 20px;
+    margin: 7.5%;
+    width: 65vw;
+}
+
+.row {
+    display: flex;
+    padding: 3%;
+    margin: 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.calc-box {
+    background-color: inherit;
+    border-radius: 15px;
+    width: max-content;
+    padding: 2%;
+}
+
+.calc-row {
+    margin-bottom: 10%;
+}
+
+.calc-row:last-of-type {
+    margin-bottom: 0;
+}
+
+.calc-row label {
+    margin: 0 0 0.5% 0;
+    color: hsl(186, 14%, 43%);
+}
+
+input[type="text"] {
+    width: inherit;
+    height: 2rem;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: hsl(183, 100%, 15%);
+    padding: 0 5% 0 0;
+    text-align: right;
+    align-content: right;
+    align-items: right;
+    justify-content: right;
+}
+
+input[type="text"]:focus-within{
+    text-align: right !important;
+    align-content: right !important;
+    align-items: right !important;
+    justify-content: right !important;
+    outline: none;
+}
+
+::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 5px;
+}
+
+.wrapper input[type="text"] {
+    border: none;
+    margin: 0 0 0 15%;
+    border-radius: inherit;
+    background-color: inherit;
+    height: inherit;
+}
+
+.wrapper i {
+    position: absolute;
+    margin: 1.75%;
+    color: hsl(184, 14%, 56%);
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 3.3vw 3.3vw;
+    grid-template-columns: 8.125vw 8.125vw 8.125vw;
+    gap: 1vw;
+    margin: 5% 0;
+}
+
+.choice {
+    width: 8.125vw;
+    height: 3.3vw;
+    border-radius: 5px;
+    color: white;
+}
+
+input[type="radio"] {
+    opacity: 0;
+    width: 2rem;
+    height: 1em;
+    background-color: #fff;
+    position: absolute;
+}
+
+input[type="radio"]:checked + label {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%) !important;
+}
+
+input[type="radio"]:hover + label {
+    background-color: hsl(173, 61%, 77%);
+    color: hsl(183, 100%, 15%) !important;
+}
+
+.radio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    background-color: hsl(183, 100%, 15%);
+    color: inherit !important;
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.choice-text {
+    width: inherit !important;
+    height: inherit !important;
+    text-align: center !important;
+    align-content: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: none;
+    border-radius: inherit;
+    background-color: hsl(189, 41%, 97%);
+}
+
+.result-box {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    color: white;
+    padding: 5%;
+}
+
+.sub {
+    color: hsl(184, 14%, 56%);
+    font-size: 0.85rem;
+}
+
+.result-val {
+    text-align: right !important;
+    align-content: right !important;
+    align-items: right !important;
+    justify-content: right !important;
+    font-size: 3rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.result-box table {
+    width: 100%;
+    height: 85%;
+}
+
+.result-box table tr {
+    padding: 0;
+    margin-top: 0;
+}
+
+.result-row {
+    height: 20%;
+}
+
+.result-row:nth-of-type(3){
+    visibility: hidden;
+}
+
+.reset {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.reset:hover {
+    background-color: hsl(173, 61%, 77%);
+}
+
+.inactive {
+    background-color: hsl(183, 79%, 24%);
+}
+
+.active {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.error {
+    outline: 2px solid hsl(10, 42%, 60%) !important;
+}
+
+.nozero {
+    width: 100%;
+}
+
+.nozeroin {
+    visibility: hidden;
+    color: hsl(10, 42%, 60%);
+    float: right;
+}
+
+footer {
+    color: hsl(183, 100%, 15%);
+    font-size: 1rem;
+}
+
+footer a {
+    text-decoration-style: dashed;
+    color: hsl(172, 67%, 45%);
+}
+
+footer a:active {
+    text-decoration-style: dashed;
+    color: hsl(172, 67%, 45%);
+}
+
+footer a:hover {
+    color: hsl(183, 79%, 24%);
+    text-decoration-style: none !important;
+}
+
+footer a:visited {
+    color: hsl(183, 79%, 24%);
+    text-decoration-style: none !important;
+}

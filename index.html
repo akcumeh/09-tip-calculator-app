@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="styles.css">
-    <title>Frontend Mentor | Tip calculator app</title>
-</head>
-<body>
-
-    Bill
-
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-
-    Number of People
-
-    Tip Amount
-    / person
-
-    Total
-    / person
-
-    Reset
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/3992635087.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Frontend Mentor | Tip calculator app</title>
+    </head>
+    <body>
+        <img src="images/logo.svg" alt="Splitter">
+        <main>
+            <div class="row">
+                <div class="calc-box col-lg-6">
+                    <div class="calc-row">
+                        <label for="bill" role="text">Bill</label>
+                        <br>
+                        <p class="wrapper">
+                            <i class="fa-solid fa-dollar-sign"></i><input type="text" name="people" value="" id="bill" minlength="2" placeholder="0">
+                        </p>
+                    </div>
+                    <div class="calc-row">
+                        <label role="radiogroup">Select Tip %</label>
+                        <div class="choices grid" role="radiogroup">
+                            <div class="choice">
+                                <input type="radio" name="radio" id="five" value="5">
+                                <label role="radio" class="radio" for="five">5%</label>
+                            </div>
+                            <div class="choice">
+                                <input type="radio" name="radio" id="ten" value="10">
+                                <label role="radio" class="radio" for="ten">10%</label>
+                            </div>
+                            <div class="choice">
+                                <input type="radio" name="radio" id="fifteen" value="15">
+                                <label role="radio" class="radio" for="fifteen">15%</label>
+                            </div>
+                            <div class="choice">
+                                <input type="radio" name="radio" id="twentyfive" value="25">
+                                <label role="radio" class="radio" for="twentyfive">25%</label>
+                            </div>
+                            <div class="choice">
+                                <input type="radio" name="radio" id="fifty" value="50">
+                                <label role="radio" class="radio" for="fifty">50%</label>
+                            </div>
+                            <div class="choice">
+                                <input type="text" name="amount" value="" id="custom" maxlength="5" minlength="1" placeholder="Custom" class="choice-text">
+                                <label role="textbox" for="custom"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-row">
+                        <label for="people" role="text" class="nozero">Number of People<span class="" style="visibility: hidden;"> Can't be zero</span></label>
+                        <br>
+                        <p class="wrapper peoplenum">
+                            <i class="fa-solid fa-user"></i><input type="text" name="people" value="" id="people" maxlength="2" minlength="1" placeholder="0">
+                        </p>
+                    </div>
+                </div>
+                <div class="result-box col-lg-6">
+                    <table>
+                        <tr class="result-row">
+                            <td>Tip Amount<br><span class="sub">/ person</span></td>
+                            <td class="result-val tip-val">$0.00</td>
+                        </tr>
+                        <tr class="result-row">
+                            <td>Total<br><span class="sub">/ person</span></td>
+                            <td class="result-val total-val">$0.00</td>
+                        </tr>
+                        <tr class="result-row">
+                            <td>empty</td>
+                        </tr>
+                    </table>
+                    <button class="reset inactive">RESET</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            Challenge by <a href="http://frontendmentor.io">Frontend Mentor</a>. Designed by <a href="http://github.com/akcumeh">Angel</a>. Compare with <a href="design/desktop-preview.jpg">desktop</a> or <a href="design/mobile-design.jpg">mobile</a> designs.
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
 </html>
