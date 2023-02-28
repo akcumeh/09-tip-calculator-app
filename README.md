@@ -82,6 +82,7 @@ In the course of solving this challenge, I learned:
 - I have found the jQuery library to be very useful as it makes me more efficient as a developer by shortening and simplifying lots of JavaScript code. I would like to get more practice with it in future projects.
 - I have learned a lot of new techniques in CSS, including styling radio elements, adding icons into input fields, and CSS grid layout. I plan to use these abilities in future projects.
 - I'm happy with how I make my webpages accessible in addition to beautifying them. I plan to keep it up going forward.
+- This project showed me a severe deficiency in my understanding, analysis, and method of solving code problems! I need to work on more projects to help me learn to think like a developer and analyze problems properly.
 
 ## Author
 

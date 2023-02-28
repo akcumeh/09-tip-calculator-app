@@ -1,5 +1,5 @@
 body {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     font-weight: 700;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@ main {
 .calc-box {
     background-color: inherit;
     border-radius: 15px;
-    width: max-content;
+    width: max(max-content, 50%);
     padding: 2%;
 }
 
@@ -140,19 +140,19 @@ input[type="radio"]:hover + label {
     border-radius: inherit;
     background-color: hsl(183, 100%, 15%);
     color: inherit !important;
-    font-size: 1.5rem;
+    font-size: 1.425rem;
     line-height: 1.25;
 }
 
 .choice-text {
-    width: inherit !important;
-    height: inherit !important;
+    width: 8.125vw !important;
+    height: 3.3vw !important;
     text-align: center !important;
     align-content: center !important;
     align-items: center !important;
     justify-content: center !important;
     border: none;
-    border-radius: inherit;
+    border-radius: 2.5%;
     background-color: hsl(189, 41%, 97%);
 }
 
@@ -211,6 +211,7 @@ input[type="radio"]:hover + label {
 
 .inactive {
     background-color: hsl(183, 79%, 24%);
+    pointer-events: none;
 }
 
 .active {
@@ -221,11 +222,14 @@ input[type="radio"]:hover + label {
     outline: 2px solid hsl(10, 42%, 60%) !important;
 }
 
-.nozero {
+.nozeroon {
     width: 100%;
+    visibility: visible;
+    color: hsl(10, 42%, 60%);
+    float: right;
 }
 
-.nozeroin {
+.nozerooff {
     visibility: hidden;
     color: hsl(10, 42%, 60%);
     float: right;

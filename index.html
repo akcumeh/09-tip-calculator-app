@@ -48,16 +48,16 @@
                                 <label role="radio" class="radio" for="fifty">50%</label>
                             </div>
                             <div class="choice">
-                                <input type="text" name="amount" value="" id="custom" maxlength="5" minlength="1" placeholder="Custom" class="choice-text">
-                                <label role="textbox" for="custom"></label>
+                                <input type="radio" name="radio" id="custom-for-radio">
+                                <label role="textbox" for="custom" id="custom-for-radio"><input type="text" name="amount" value="" id="custom" maxlength="5" minlength="1" placeholder="Custom" class="choice-text"></label>
                             </div>
                         </div>
                     </div>
                     <div class="calc-row">
-                        <label for="people" role="text" class="nozero">Number of People<span class="" style="visibility: hidden;"> Can't be zero</span></label>
+                        <label for="people" role="text" class="">Number of People<span class="nozerooff"> Can't be zero or less</span></label>
                         <br>
                         <p class="wrapper peoplenum">
-                            <i class="fa-solid fa-user"></i><input type="text" name="people" value="" id="people" maxlength="2" minlength="1" placeholder="0">
+                            <i class="fa-solid fa-user"></i><input type="text" name="people" value="" id="people" maxlength="5" minlength="1" placeholder="0">
                         </p>
                     </div>
                 </div>
