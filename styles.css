@@ -259,3 +259,59 @@ footer a:visited {
     color: hsl(183, 79%, 24%);
     text-decoration-style: none !important;
 }
+
+/* mobile version with max-width 640px */
+@media only screen and (max-width: 640px) {
+    body {
+        padding: 5%;
+    }
+
+    main {
+        margin: 5%;
+        width: 90vw;
+    }
+
+    .row {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .calc-box {
+        width: 100%;
+    }
+
+    .result-box {
+        height: max-content;
+    }
+
+    .wrapper {
+        margin-bottom: 5%;
+        padding: 2.5%;
+    }
+
+    td {
+        padding: 2.5%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-template-rows: auto;
+        gap: 5%;
+        margin: 5% 0;
+    }
+
+    .choice {
+        width: 100%;
+        height: auto;
+    }
+
+    .choice-text {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 5%;
+    }
+
+    .result-val {
+        font-size: 2rem;
+    }
+}
